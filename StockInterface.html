@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Stock Prediction UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 960px;
+            padding: 20px;
+            background: #16213e;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+            margin-top: 10px; /* Adjusted margin */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 0; /* Adjusted margin */
+        }
+        .form-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        input, select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        .btn {
+            width: 120px;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0f3460;
+            color: white;
+            transition: background-color .3s;
+            transform: translateX(200%);
+        }
+        .btn:hover {
+            background-color: #305c7e;
+        }
+        .stock-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0;
+        }
+        .stock-info div {
+            text-align: center;
+        }
+        .visualization {
+            margin-top: 0;
+            text-align: center;
+        }
+        .visualization img {
+            max-width: 100%;
+            margin-top: -5px; /* Adjusted margin */
+        }
+        .visualization h2 {
+            margin-top: 0; /* Adjusted margin */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Directional Stock Prediction Dashboard</h1>
+        <div class="form-section">
+            <div>
+                <label for="stock">Select Stock:</label>
+                <select id="stock">
+                    <option value="amazon">Amazon</option>
+                    <option value="apple">Apple</option>
+                </select>
+            </div>
+            <div>
+                <label for="interval">Select Time Interval:</label>
+                <select id="interval">
+                    <option value="15min">15 min</option>
+                    <option value="1hour">1 hour</option>
+                    <option value="4hours">4 hours</option>
+                    <option value="1day">1 day</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn">Predict</button>
+        <div class="stock-info">
+            <div>
+                <h2>Current Price:</h2>
+                <p id="current-price">$185.19</p>
+            </div>
+            <div>
+                <h2>Prediction:</h2>
+                <p id="prediction">Upward</p>
+            </div>
+        </div>
+        <div class="visualization">
+            <h2>Stock Price Over Time</h2>
+            <img src="https://i.imgur.com/HUd9VDG.png" alt="Stock Price Over Time">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize your chart with Chart.js or another visualization library
+    </script>
+</body>
+</html>
